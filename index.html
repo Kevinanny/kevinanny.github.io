@@ -156,6 +156,100 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/07/%E7%9F%A2%E9%87%8F%E5%BE%AE%E5%88%86%E7%AE%97%E5%AD%90/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Kevin">
+      <meta itemprop="description" content="我们始于迷惘，终于更高水平的迷惘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="L. paludosum">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/07/07/%E7%9F%A2%E9%87%8F%E5%BE%AE%E5%88%86%E7%AE%97%E5%AD%90/" class="post-title-link" itemprop="url">矢量微分算子与拉普拉斯算子</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-07-07 10:50:35 / 修改时间：12:35:32" itemprop="dateCreated datePublished" datetime="2020-07-07T10:50:35+08:00">2020-07-07</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%B0%E5%AD%A6%E7%89%A9%E7%90%86%E5%9F%BA%E7%A1%80/" itemprop="url" rel="index"><span itemprop="name">数学物理基础</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h2 id="矢量微分算子-nabla"><a href="#矢量微分算子-nabla" class="headerlink" title="矢量微分算子 $\nabla$"></a>矢量微分算子 $\nabla$</h2><script type="math/tex; mode=display">\nabla=\frac{\partial}{\partial x} \boldsymbol{i}+\frac{\partial}{\partial y} \boldsymbol{j}+\frac{\partial}{\partial z} \boldsymbol{k}</script><p>若函数$u(x, y, z)$和矢量$\boldsymbol{E}(x, y, z)$有连续的一阶偏导数，则可作如下定义：</p>
+<h3 id="梯度"><a href="#梯度" class="headerlink" title="梯度"></a>梯度</h3><p>函数 $u$ 的梯度定义为</p>
+<script type="math/tex; mode=display">\nabla u=\frac{\partial u}{\partial x} i+\frac{\partial u}{\partial y} j+\frac{\partial u}{\partial z} k</script><p>注：也用 $\operatorname{grad} u$ 表示。</p>
+<p>梯度是一个<strong>矢量</strong>，函数在梯度方向上变化率最快，变化率为梯度的模。</p>
+<p>例如：考虑一座在 $(x,y)$ 点高度是 $H(x,y)$ 的山。这一点的<strong>梯度</strong>是在该点坡度（或者说斜度）最陡的方向。</p>
+<h3 id="散度"><a href="#散度" class="headerlink" title="散度"></a>散度</h3><p>矢量 $\boldsymbol{E}$ 的散度定义为</p>
+<script type="math/tex; mode=display">\nabla \cdot \boldsymbol{E}=\left(\frac{\partial}{\partial x} \boldsymbol{i}+\frac{\partial}{\partial y} \boldsymbol{j}+\frac{\partial}{\partial z} \boldsymbol{k}\right) \cdot\left(E_{x} i+E_{y} \boldsymbol{j}+E_{z} \boldsymbol{k}\right)=\frac{\partial E_{x}}{\partial x}+\frac{\partial E_{y}}{\partial y}+\frac{\partial E_{z}}{\partial z}</script><p>注： 也可用 $\operatorname{div} u$ 表示</p>
+<p>物理上散度的意义是场的有源性，思考一个点电荷激发的电场，任意选取一个单位体积，若是单位体积不包含该电荷，那么毫无疑问，有多少电场线进入就有多少电场线出，散度为0。但若选取的单位体积内包含了一个正点电荷，则电场线只出不进，因而散度不为零。所以散度经常用来判断是否存在场源。</p>
+<h3 id="旋度"><a href="#旋度" class="headerlink" title="旋度"></a>旋度</h3><p>矢量 $\boldsymbol{E}$ 的旋度定义为</p>
+<script type="math/tex; mode=display">\begin{aligned}
+\nabla \times \boldsymbol{E} &=\left|\begin{array}{ccc}
+\boldsymbol{i} & \boldsymbol{j} & \boldsymbol{k} \\
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+E_{x} & E_{y} & E_{z}
+\end{array}\right|=\left|\begin{array}{cc}
+\frac{\partial}{\partial y} & \frac{\partial}{\partial z} \\
+E_{y} & E_{z}
+\end{array}\right| \boldsymbol{i}-\left|\begin{array}{cc}
+\frac{\partial}{\partial x} & \frac{\partial}{\partial z} \\
+E_{x} & E_{z}
+\end{array}\right| \boldsymbol{j}+\left|\begin{array}{cc}
+\frac{\partial}{\partial x} & \frac{\partial}{\partial y} \\
+E_{x} & E_{y}
+\end{array}\right| \boldsymbol{k} \\
+\\
+&=\left(\frac{\partial E_{z}}{\partial y}-\frac{\partial E_{y}}{\partial z}\right) i+\left(\frac{\partial E_{x}}{\partial z}-\frac{\partial E_{z}}{\partial x}\right) \boldsymbol{j}+\left(\frac{\partial E_{y}}{\partial x}-\frac{\partial E_{x}}{\partial y}\right) \boldsymbol{k}
+\end{aligned}</script><p>想象一个漩涡（二维）向量场 $\boldsymbol{E}$，水流方向即为该向量场方向，水流力量表示向量场的强度。要计算一艘船（有形状非质点）在水流中受到旋转的力，则沿船的轮廓曲线 $\Gamma$ 进行积分， $\oint_{\Gamma} \boldsymbol{E} \cdot \boldsymbol{\tau} d l$ 其中 $\boldsymbol{\tau}$ 方向为 $\Gamma$ 的切方向。当将船视为一个质点时，该积分即为该点的旋度。旋度可以判断该场是否为有旋场。例如，在平行电场中，取一矩形环路，其积分为零，为无旋场。</p>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/05/test/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -303,20 +397,20 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">1</span>
+          <span class="site-state-item-count">2</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
       <div class="site-state-item site-state-categories">
             <a href="/categories/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">分类</span></a>
       </div>
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">1</span>
+        <span class="site-state-item-count">2</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
