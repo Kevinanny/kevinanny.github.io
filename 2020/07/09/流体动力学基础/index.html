@@ -20,20 +20,19 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Pisces","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="hexo g &amp;&amp; hexo d  $E&#x3D;\frac{hv}{\lambda}$ $v&#x3D;\frac{c}{n}$ $d \vec{F}&#x3D; Id \vec{l} \times \vec{B}$  \mathbf{V}_1 \times \mathbf{V}_2 &#x3D;   \begin{vmatrix}     \mathbf{i}&amp; \mathbf{j}&amp; \mathbf{k} \\">
+  <meta name="description" content="描述流体运动的数学方法拉格朗日法（质点-时间法）\left\{\begin{array}{l} x&#x3D;x(\xi, \eta, \zeta, t) \\ y&#x3D;y(\xi, \eta, \zeta, t) \\ z&#x3D;z(\xi, \eta, \zeta, t) \end{array}\right.用$(\xi, \eta, \zeta, t)$ 表示在 t 时刻质点的位置。则其速度和加速度为 \lef">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="http://yoursite.com/2020/07/05/test/index.html">
+<meta property="og:title" content="流体动力学基础">
+<meta property="og:url" content="http://yoursite.com/2020/07/09/%E6%B5%81%E4%BD%93%E5%8A%A8%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%80/index.html">
 <meta property="og:site_name" content="L. paludosum">
-<meta property="og:description" content="hexo g &amp;&amp; hexo d  $E&#x3D;\frac{hv}{\lambda}$ $v&#x3D;\frac{c}{n}$ $d \vec{F}&#x3D; Id \vec{l} \times \vec{B}$  \mathbf{V}_1 \times \mathbf{V}_2 &#x3D;   \begin{vmatrix}     \mathbf{i}&amp; \mathbf{j}&amp; \mathbf{k} \\">
+<meta property="og:description" content="描述流体运动的数学方法拉格朗日法（质点-时间法）\left\{\begin{array}{l} x&#x3D;x(\xi, \eta, \zeta, t) \\ y&#x3D;y(\xi, \eta, \zeta, t) \\ z&#x3D;z(\xi, \eta, \zeta, t) \end{array}\right.用$(\xi, \eta, \zeta, t)$ 表示在 t 时刻质点的位置。则其速度和加速度为 \lef">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-05T15:52:19.000Z">
-<meta property="article:modified_time" content="2020-07-06T03:18:23.262Z">
+<meta property="article:published_time" content="2020-07-09T01:58:27.000Z">
+<meta property="article:modified_time" content="2020-07-09T02:45:31.960Z">
 <meta property="article:author" content="Kevin">
-<meta property="article:tag" content="equation">
 <meta name="twitter:card" content="summary">
 
-<link rel="canonical" href="http://yoursite.com/2020/07/05/test/">
+<link rel="canonical" href="http://yoursite.com/2020/07/09/%E6%B5%81%E4%BD%93%E5%8A%A8%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%80/">
 
 
 <script id="page-configurations">
@@ -45,7 +44,7 @@
   };
 </script>
 
-  <title>test | L. paludosum</title>
+  <title>流体动力学基础 | L. paludosum</title>
   
 
 
@@ -159,7 +158,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/05/test/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/09/%E6%B5%81%E4%BD%93%E5%8A%A8%E5%8A%9B%E5%AD%A6%E5%9F%BA%E7%A1%80/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -172,7 +171,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          test
+          流体动力学基础
         </h1>
 
         <div class="post-meta">
@@ -181,23 +180,17 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-07-05 23:52:19" itemprop="dateCreated datePublished" datetime="2020-07-05T23:52:19+08:00">2020-07-05</time>
+              <time title="创建时间：2020-07-09 09:58:27 / 修改时间：10:45:31" itemprop="dateCreated datePublished" datetime="2020-07-09T09:58:27+08:00">2020-07-09</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-06 11:18:23" itemprop="dateModified" datetime="2020-07-06T11:18:23+08:00">2020-07-06</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B5%8B%E8%AF%95/" itemprop="url" rel="index"><span itemprop="name">测试</span></a>
+                  <a href="/categories/%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">流体力学</span></a>
                 </span>
             </span>
 
@@ -212,16 +205,41 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>hexo g &amp;&amp; hexo d</p>
-<ul>
-<li>$E=\frac{hv}{\lambda}$ $v=\frac{c}{n}$ $d \vec{F}= Id \vec{l} \times \vec{B}$</li>
-</ul>
-<script type="math/tex; mode=display">\mathbf{V}_1 \times \mathbf{V}_2 =  
-\begin{vmatrix}  
-  \mathbf{i}& \mathbf{j}& \mathbf{k} \\  
-  \frac{\partial X}{\partial u}& \frac{\partial Y}{\partial u}& 0 \\  
-  \frac{\partial X}{\partial v}& \frac{\partial Y}{\partial v}& 0 \\  
-\end{vmatrix}</script>
+        <h2 id="描述流体运动的数学方法"><a href="#描述流体运动的数学方法" class="headerlink" title="描述流体运动的数学方法"></a>描述流体运动的数学方法</h2><h3 id="拉格朗日法（质点-时间法）"><a href="#拉格朗日法（质点-时间法）" class="headerlink" title="拉格朗日法（质点-时间法）"></a>拉格朗日法（质点-时间法）</h3><script type="math/tex; mode=display">\left\{\begin{array}{l}
+x=x(\xi, \eta, \zeta, t) \\
+y=y(\xi, \eta, \zeta, t) \\
+z=z(\xi, \eta, \zeta, t)
+\end{array}\right.</script><p>用$(\xi, \eta, \zeta, t)$ 表示在 t 时刻质点的位置。则其速度和加速度为</p>
+<script type="math/tex; mode=display">\left\{\begin{array}{l}
+u(\xi, \eta, \zeta, t)=\frac{\partial x}{\partial t} \\
+v(\xi, \eta, \zeta, t)=\frac{\partial y}{\partial t} \\
+w(\xi, \eta, \zeta, t)=\frac{\partial z}{\partial t}
+\end{array}\left\{\begin{array}{l}
+a_{x}(\xi, \eta, \zeta, t)=\frac{\partial u}{\partial t}=\frac{\partial^{2} x}{\partial t^{2}} \\
+a_{x}(\xi, \eta, \zeta, t)=\frac{\partial v}{\partial t}=\frac{\partial^{2} y}{\partial t^{2}} \\
+a_{2}(\xi, \eta, \zeta, t)=\frac{\partial v}{\partial t}=\frac{\partial^{2} z}{\partial t^{2}}
+\end{array}\right.\right.</script><p>其表示较为复杂。且实际上，我们更关注特定区域流体的状态，而非某些特定流体质点，所以欧拉法更常用。</p>
+<h3 id="欧拉法（空间-时间法）"><a href="#欧拉法（空间-时间法）" class="headerlink" title="欧拉法（空间-时间法）"></a>欧拉法（空间-时间法）</h3><script type="math/tex; mode=display">\left\{\begin{array}{l}
+u=u(x, y, z, t) \\
+v=v(x, y, z, t) \\
+w=w(x, y, z, t)
+\end{array}\right.</script><p>用 $(x, y, z, t)$ 表示空间 $(x, y, z)$ 处在 t 时刻的速度。</p>
+<p>其加速度可表示为</p>
+<script type="math/tex; mode=display">\left\{\begin{array}{l}
+a_{x}=\frac{\partial u}{\partial t}+u \frac{\partial u}{\partial x}+v \frac{\partial u}{\partial y}+w \frac{\partial u}{\partial z} \\
+a_{y}=\frac{\partial v}{\partial t}+u \frac{\partial v}{\partial x}+v \frac{\partial v}{\partial y}+w \frac{\partial v}{\partial z} \\
+a_{z}=\frac{\partial w}{\partial t}+u \frac{\partial w}{\partial x}+v \frac{\partial w}{\partial y}+w \frac{\partial w}{\partial z}
+\end{array}\right.</script><script type="math/tex; mode=display">\boldsymbol{a} =\frac{\partial \boldsymbol{V}}{\partial t}+u \frac{\partial \boldsymbol{V}}{\partial x}+v \frac{\partial \boldsymbol{V}}{\partial y}+w \frac{\partial \boldsymbol{V}}{\partial z}</script><script type="math/tex; mode=display">\boldsymbol{a}=\frac{\partial \boldsymbol{V}}{\partial t}+(\boldsymbol{V} \cdot \nabla) \boldsymbol{V}</script><p>质点加速度 = 局部加速度 + 对流加速度</p>
+<h4 id="拓展：质点物理参数的导数"><a href="#拓展：质点物理参数的导数" class="headerlink" title="拓展：质点物理参数的导数"></a>拓展：质点物理参数的导数</h4><p>质点物理参数的导数 = 局部导数 + 对流导数</p>
+<script type="math/tex; mode=display">\frac{d}{d t}=\frac{\partial}{\partial t}+u \frac{\partial}{\partial x}+v \frac{\partial}{\partial y}+w \frac{\partial}{\partial z}</script><p>该物理参数可以是速度，密度，温度等</p>
+<script type="math/tex; mode=display">\frac{\mathrm{d} \rho}{\mathrm{d} t}=\frac{\partial \rho}{\partial t}+u \frac{\partial \rho}{\partial x}+v \frac{\partial \rho}{\partial y}+w \frac{\partial \rho}{\partial z}</script><h3 id="应用"><a href="#应用" class="headerlink" title="应用"></a>应用</h3><h4 id="定常流动"><a href="#定常流动" class="headerlink" title="定常流动"></a>定常流动</h4><p>流动参数不随时间变化，所有物理参数的局部导数$\frac{\partial}{\partial t}=0$ </p>
+<h2 id="描述流体运动的物理图像"><a href="#描述流体运动的物理图像" class="headerlink" title="描述流体运动的物理图像"></a>描述流体运动的物理图像</h2><h3 id="迹线-流线-脉线"><a href="#迹线-流线-脉线" class="headerlink" title="迹线 流线 脉线"></a>迹线 流线 脉线</h3><p><strong>脉线（染色线）</strong>：相续通过同一空间点的流体质点（很多质点）所连成的线。例如将钢笔尖插入河流墨水所形成的线。</p>
+<p><strong>迹线</strong>：流体质点的运动轨迹线。是指单个质点运动形成的轨迹线，例如发光粒子在相机长曝光时间下形成的轨迹。</p>
+<p><strong>流线</strong>：处处与速度矢量相切的空间曲线。</p>
+<p><strong>流线方程：$\frac{d x}{u}=\frac{d y}{v}=\frac{d z}{w}$</strong></p>
+<h3 id="流量"><a href="#流量" class="headerlink" title="流量"></a>流量</h3><p>体积流量：单位时间内通过指定面积的流体体积量</p>
+<p>质量流量：单位时间内通过指定面积的流体流量</p>
+
     </div>
 
     
@@ -229,20 +247,17 @@
     
 
       <footer class="post-footer">
-          <div class="post-tags">
-              <a href="/tags/equation/" rel="tag"># equation</a>
-          </div>
 
         
 
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/07/07/%E7%9F%A2%E9%87%8F%E5%BE%AE%E5%88%86%E7%AE%97%E5%AD%90%E4%B8%8E%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90/" rel="next" title="矢量微分算子与拉普拉斯算子">
-      矢量微分算子与拉普拉斯算子 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/07/07/%E6%88%91%E4%B9%9F%E6%83%B3%E6%9C%89%E4%B8%80%E4%B8%AA%E6%A3%AE%E5%B1%B1%E5%AE%9E%E6%A0%97/" rel="prev" title="我也想有一个森山实栗">
+      <i class="fa fa-chevron-left"></i> 我也想有一个森山实栗
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -302,6 +317,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#描述流体运动的数学方法"><span class="nav-number">1.</span> <span class="nav-text">描述流体运动的数学方法</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#拉格朗日法（质点-时间法）"><span class="nav-number">1.1.</span> <span class="nav-text">拉格朗日法（质点-时间法）</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#欧拉法（空间-时间法）"><span class="nav-number">1.2.</span> <span class="nav-text">欧拉法（空间-时间法）</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#拓展：质点物理参数的导数"><span class="nav-number">1.2.1.</span> <span class="nav-text">拓展：质点物理参数的导数</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用"><span class="nav-number">1.3.</span> <span class="nav-text">应用</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#定常流动"><span class="nav-number">1.3.1.</span> <span class="nav-text">定常流动</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#描述流体运动的物理图像"><span class="nav-number">2.</span> <span class="nav-text">描述流体运动的物理图像</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#迹线-流线-脉线"><span class="nav-number">2.1.</span> <span class="nav-text">迹线 流线 脉线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流量"><span class="nav-number">2.2.</span> <span class="nav-text">流量</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
