@@ -28,7 +28,7 @@
 <meta property="og:description" content="描述流体运动的数学方法拉格朗日法（质点-时间法）\left\{\begin{array}{l} x&#x3D;x(\xi, \eta, \zeta, t) \\ y&#x3D;y(\xi, \eta, \zeta, t) \\ z&#x3D;z(\xi, \eta, \zeta, t) \end{array}\right.用$(\xi, \eta, \zeta, t)$ 表示在 t 时刻质点的位置。则其速度和加速度为 \lef">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-07-09T01:58:27.000Z">
-<meta property="article:modified_time" content="2020-07-09T02:45:31.960Z">
+<meta property="article:modified_time" content="2020-08-26T07:57:29.712Z">
 <meta property="article:author" content="Kevin">
 <meta name="twitter:card" content="summary">
 
@@ -180,10 +180,16 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2020-07-09 09:58:27 / 修改时间：10:45:31" itemprop="dateCreated datePublished" datetime="2020-07-09T09:58:27+08:00">2020-07-09</time>
+              <time title="创建时间：2020-07-09 09:58:27" itemprop="dateCreated datePublished" datetime="2020-07-09T09:58:27+08:00">2020-07-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-calendar-check-o"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2020-08-26 15:57:29" itemprop="dateModified" datetime="2020-08-26T15:57:29+08:00">2020-08-26</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
@@ -214,11 +220,11 @@ z=z(\xi, \eta, \zeta, t)
 u(\xi, \eta, \zeta, t)=\frac{\partial x}{\partial t} \\
 v(\xi, \eta, \zeta, t)=\frac{\partial y}{\partial t} \\
 w(\xi, \eta, \zeta, t)=\frac{\partial z}{\partial t}
-\end{array}\left\{\begin{array}{l}
+\end{array} \qquad \left\{\begin{array}{l}
 a_{x}(\xi, \eta, \zeta, t)=\frac{\partial u}{\partial t}=\frac{\partial^{2} x}{\partial t^{2}} \\
 a_{x}(\xi, \eta, \zeta, t)=\frac{\partial v}{\partial t}=\frac{\partial^{2} y}{\partial t^{2}} \\
 a_{2}(\xi, \eta, \zeta, t)=\frac{\partial v}{\partial t}=\frac{\partial^{2} z}{\partial t^{2}}
-\end{array}\right.\right.</script><p>其表示较为复杂。且实际上，我们更关注特定区域流体的状态，而非某些特定流体质点，所以欧拉法更常用。</p>
+\end{array}\right.\right.</script><p>其表示较为复杂。且实际上，我们更关注特定区域流体的状态，而非某些特定流体质点，所以更常使用下述方法。</p>
 <h3 id="欧拉法（空间-时间法）"><a href="#欧拉法（空间-时间法）" class="headerlink" title="欧拉法（空间-时间法）"></a>欧拉法（空间-时间法）</h3><script type="math/tex; mode=display">\left\{\begin{array}{l}
 u=u(x, y, z, t) \\
 v=v(x, y, z, t) \\
