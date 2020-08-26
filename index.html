@@ -156,6 +156,165 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/26/%E5%BC%A0%E9%87%8F%E5%9F%BA%E7%A1%80/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Kevin">
+      <meta itemprop="description" content="我们始于迷惘，终于更高水平的迷惘">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="L. paludosum">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          
+            <a href="/2020/08/26/%E5%BC%A0%E9%87%8F%E5%9F%BA%E7%A1%80/" class="post-title-link" itemprop="url">张量基础</a>
+        </h1>
+
+        <div class="post-meta">
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2020-08-26 10:10:00 / 修改时间：14:16:09" itemprop="dateCreated datePublished" datetime="2020-08-26T10:10:00+08:00">2020-08-26</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">流体力学</span></a>
+                </span>
+            </span>
+
+          
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+          <h3 id="张量的定义"><a href="#张量的定义" class="headerlink" title="张量的定义"></a>张量的定义</h3><p>摘自<a href="https://www.zhihu.com/question/20695804/answer/43265860" target="_blank" rel="noopener">知乎 Andrew Shen 的回答</a>。</p>
+<p><strong>物理上：</strong></p>
+<p><strong>一个量, 在不同的参考系下按照某种特定的法则进行变换, 就是张量. ——A.Zee</strong></p>
+<p><strong>用张量语言描述的物理定律自动保证了不随参考系变化的这一性质. 而且从记号的角度看, 用张量也更加简洁.</strong> </p>
+<p><strong>数学上：</strong></p>
+<p><strong>矩阵的意义是线性变换, 相似矩阵是同一个线性变换在不同的基下的表示. 于是张量可以抽象为线性变换. </strong></p>
+<p>陈维桓先生的《微分流形初步》一书中的一段话:</p>
+<p><code>张量的概念是 G.Ricci 在19世纪末提出的. G.Ricci 研究张量的目的是为几何性质和物理规律的表达寻求一种在坐标变换下不变的形式. 他所考虑的张量是如同向量的分量那样的数组, 要求它们在坐标变换下服从某种线性变换的规律. 近代的理论已经把张量叙述成向量空间及其对偶空间上的多重线性函数, 但是用分量表示张量仍有它的重要性, 尤其是涉及张量的计算时更是如此.</code></p>
+<hr>
+<h3 id="张量的指标表示方法"><a href="#张量的指标表示方法" class="headerlink" title="张量的指标表示方法"></a>张量的指标表示方法</h3><p>用字母加下标表示张量</p>
+<ol>
+<li><p>自由标: 可以在默认范围内任意取值的指标.</p>
+<p>一个自由标表示一阶张量:  <script type="math/tex">\left[u_{\alpha}\right]=\left[\begin{array}{lll}
+u_{1} & u_{2} & u_{3}
+\end{array}\right]</script></p>
+<p>两个自由标表示矩阵或二阶张量:  <script type="math/tex">\left[A_{\alpha \beta}\right]=\left[\begin{array}{ccc}
+A_{11} & A_{12} & A_{13} \\
+A_{21} & A_{22} & A_{23} \\
+A_{31} & A_{32} & A_{33}
+\end{array}\right]</script></p>
+</li>
+<li><p>哑标与Einstein求和约定: 凡在同一项内，重复一次且仅重复一次的指标，表示对该指标在其取值范围内求和，称哑标。如：</p>
+<script type="math/tex; mode=display">\begin{array}{l}
+a_{\alpha} x_{\alpha}=a_{1} x_{1}+a_{2} x_{2}+a_{3} x_{3} \\
+\sigma_{\alpha \alpha}=\sigma_{\beta \beta}=\sigma_{11}+\sigma_{22}+\sigma_{33}
+\end{array}</script></li>
+<li><p>克罗内克(Kronecker-$\delta$}符号</p>
+<p>定义：<script type="math/tex">\delta_{i j}=\left\{\begin{array}{l}
+1 \quad 当i=j\\
+0 \quad 当i\neq j
+\end{array}\right.</script></p>
+<p>由定义得：<script type="math/tex">I=\left[\begin{array}{lll}
+1 & 0 & 0 \\
+0 & 1 & 0 \\
+0 & 0 & 1
+\end{array}\right]=\left[\begin{array}{lll}
+\delta_{11} & \delta_{12} & \delta_{13} \\
+\delta_{21} & \delta_{22} & \delta_{11} \\
+\delta_{31} & \delta_{32} & \delta_{33}
+\end{array}\right]=\left[\delta_{i j}\right]</script></p>
+<p>由Einstein求和约定, 克罗内克符号可以对张量进行缩并，如下：</p>
+<script type="math/tex; mode=display">\delta_{i j} A_{i}=\delta_{1 j} A_{1}+\delta_{2 j} A_{2}+\delta_{3 j} A_{3}=A_{j}=\left\{\begin{array}{ll}
+A_{1} & j=1 \\
+A_{2} & j=2 \\
+A_{3} & j=3
+\end{array}\right.</script></li>
+<li><p>张量的缩并</p>
+<script type="math/tex; mode=display">\begin{array}{l}
+\delta_{\alpha \beta} T_{\beta k}=T_{\alpha k} \quad \delta_{\alpha \beta} \delta_{\beta k}=\delta_{\alpha k} \quad \delta_{i j} \delta_{j k} \delta_{k l}=\delta_{i l} \\
+\delta_{i j} \delta_{i j}=\delta_{i i}=\delta_{j j}=\delta_{11}+\delta_{22}+\delta_{33}=3 \\
+A_{i j} \delta_{i j}=A_{i i}=A_{j j}=A_{11}+A_{22}+A_{33}
+\end{array}</script></li>
+<li><p>置换符号</p>
+<script type="math/tex; mode=display">e_{\alpha \beta \gamma}=\overrightarrow{i_{\alpha}} \cdot\left(\overrightarrow{i_{\beta}} \times \overrightarrow{i_{\gamma}}\right)=\left|\begin{array}{lll}
+\delta_{\alpha 1} & \delta_{\alpha 2} & \delta_{\alpha 3} \\
+\delta_{\beta 1} & \delta_{\beta 2} & \delta_{\beta 1} \\
+\delta_{\gamma 1} & \delta_{\gamma 2} & \delta_{\gamma 3}
+\end{array}\right|=\left\{\begin{array}{cc}
+1 & \alpha \beta \gamma \text { 的正循环排列 } \\
+-1 & \alpha \beta \gamma \text { 的逆循环排列 } \\
+0 & \alpha \beta \gamma \text { 的重复排列 }
+\end{array}\right.</script><p>例: $e<em>{2 3 1}=1,\ e</em>{3 2 1}=-1$</p>
+<script type="math/tex; mode=display">e_{\alpha \beta \gamma} \cdot e_{i j k}=\left|\begin{array}{ccc}
+\delta_{\alpha i} & \delta_{\alpha j} & \delta_{\alpha k} \\
+\delta_{\beta i} & \delta_{\beta j} & \delta_{\beta k} \\
+\delta_{\gamma i} & \delta_{\gamma j} & \delta_{\gamma k}
+\end{array}\right|$$              特殊情况下: $$\begin{array}{l}
+e_{\alpha \beta \gamma} \cdot e_{i j \gamma}=\delta_{\alpha i} \delta_{\beta j}-\delta_{\alpha j} \delta_{\beta i} \\
+e_{\alpha \beta \gamma} \cdot e_{i \beta \gamma}=2 \delta_{\alpha i} \\
+e_{\alpha \beta \gamma} \cdot e_{\alpha \beta \gamma}=2 \times 3=6
+\end{array}</script></li>
+<li><p>转置</p>
+<script type="math/tex; mode=display">\left [\nabla \vec v \right]^T=\left [\frac{\partial v_{\alpha}}{\partial x_{\beta}}  \right]^T=\left [\frac{\partial v_{\beta}}{\partial x_{\alpha}}  \right]</script><p>对称张量：转置张量等于原张量。$S^T=S$ </p>
+<p>反对称张量：转置张量等于负的原张量 $\Omega^T=-\Omega$ </p>
+<p>二阶张量的分解定理：<script type="math/tex">A_{\alpha \beta}=S_{\alpha \beta}+\Omega_{\alpha \beta}</script>, 其中<script type="math/tex">S_{\alpha \beta}=\frac{1}{2}(A_{\alpha \beta}+A_{\beta \alpha})\quad \Omega_{\alpha \beta}=\frac{1}{2}(A_{\alpha \beta}-A_{\beta \alpha})</script> </p>
+</li>
+<li><p>应用</p>
+<script type="math/tex; mode=display">\begin{aligned}
+&\vec{A} \times \vec{B}=A_{\alpha} \vec{i}_{\alpha} \times B_{\beta} \vec{i}_{\beta}=e_{\alpha \beta \gamma} A_{\alpha} B_{\beta} \vec{i}_{\gamma}\\
+&\nabla \times \vec{v}=\frac{\partial}{\partial x_{\alpha}} \overrightarrow{i_{\alpha}} \times v_{\beta} \overrightarrow{i_{\beta}}=\overrightarrow{i_{\alpha}} \times \overrightarrow{i_{\beta}} \frac{\partial v_{\beta}}{\partial x_{\alpha}}=e_{\alpha \beta \gamma} \frac{\partial v_{\beta}}{\partial x_{\alpha}} \overrightarrow{i_{\gamma}}\\
+&当\ \vec{\omega}=\frac{1}{2} \nabla \times \vec{v} \text { 时 }, \quad \omega_{\gamma}=\frac{1}{2} e_{\alpha \beta \gamma} \frac{\partial v_{\beta}}{\partial x_{\alpha}}\\
+&e_{\alpha \beta \gamma} \omega_{\gamma}=\frac{1}{2} e_{\alpha \beta \gamma} e_{i j \gamma} \frac{\partial v_{j}}{\partial x_{i}}=\frac{1}{2}\left(\delta_{\alpha i} \delta_{\beta j}-\delta_{\alpha j} \delta_{\beta i}\right) \frac{\partial v_{j}}{\partial x_{i}}=\frac{1}{2}\left(\frac{\partial v_{\beta}}{\partial x_{\alpha}}-\frac{\partial v_{\alpha}}{\partial x_{\beta}}\right)=a_{\alpha \beta}\\
+&\vec{B} \cdot a=B_{k} \vec{i}_{k} \cdot \vec{i}_{\alpha} a_{\alpha \beta} \vec{i}_{\beta}=a_{\alpha \beta} B_{\alpha} \vec{i}_{\beta}=e_{\alpha \beta \gamma} \omega_{\gamma} B_{\alpha} \vec{i}_{\beta}=\vec{\omega} \times \vec{B}
+\end{aligned}</script></li>
+<li><p>各向同性张量</p>
+<p>该张量其各个分量的量值在坐标系的正交变换（转动）下仍保持其各自的原值不变。</p>
+<p>二阶单位张量（各向同性张量）可表示为：<script type="math/tex">I=\vec{i}_{\alpha} \delta_{\alpha \beta} \vec{i}_{\beta}</script> </p>
+<p>四阶各向同性张量可表示为：<script type="math/tex">\begin{aligned}
+C_{i j k l}=\lambda \delta_{i j} \delta_{k l}+\mu \delta_{i k} \delta_{j l}+\gamma \delta_{i l} \delta_{j k}
+\end{aligned}</script>，其中 $\lambda,\mu,\gamma$ 均为常数。</p>
+</li>
+</ol>
+
+      
+    </div>
+
+    
+    
+    
+      <footer class="post-footer">
+        <div class="post-eof"></div>
+      </footer>
+  </article>
+  
+  
+  
+
+        
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block home" lang="zh-CN">
     <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/09/%E6%97%A0%E9%BB%8F%E4%B8%8D%E5%8F%AF%E5%8E%8B%E7%BC%A9%E6%B5%81/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -659,7 +818,7 @@ E_{x} & E_{y}
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">4</span>
+          <span class="site-state-item-count">5</span>
           <span class="site-state-item-name">日志</span>
         </a>
       </div>
@@ -672,7 +831,7 @@ E_{x} & E_{y}
       <div class="site-state-item site-state-tags">
             <a href="/tags/">
           
-        <span class="site-state-item-count">2</span>
+        <span class="site-state-item-count">3</span>
         <span class="site-state-item-name">标签</span></a>
       </div>
   </nav>
