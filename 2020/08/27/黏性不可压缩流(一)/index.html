@@ -20,20 +20,25 @@
     var CONFIG = {"hostname":"yoursite.com","root":"/","scheme":"Gemini","version":"7.7.2","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":false},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":false,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}}};
   </script>
 
-  <meta name="description" content="hexo g &amp;&amp; hexo d  $E&#x3D;\frac{hv}{\lambda}$ $v&#x3D;\frac{c}{n}$ $d \vec{F}&#x3D; Id \vec{l} \times \vec{B}$  \mathbf{V}_1 \times \mathbf{V}_2 &#x3D;   \begin{vmatrix}     \mathbf{i}&amp; \mathbf{j}&amp; \mathbf{k} \\">
+  <meta name="description" content="1. Newton内摩擦定律 两平行平板中具有粘性流体。上平板以速度 $V$ 水平移动，而下平板静止不动。由于摩擦，紧挨平板的流体与平板具有相同的速度 (无滑移条件)，平板之间的流体层的速度则与下平板的距离成正比，即： u&#x3D;\frac {V}{a} \cdot y流体摩擦表现为阻碍上平板移动力，定义单位面积平板上受到的力为 $\tau&#x3D;\mu \cdot \frac{V}{a}$，则剪切应力可表示">
 <meta property="og:type" content="article">
-<meta property="og:title" content="test">
-<meta property="og:url" content="http://yoursite.com/2020/07/05/test/index.html">
+<meta property="og:title" content="黏性不可压缩流(一)">
+<meta property="og:url" content="http://yoursite.com/2020/08/27/%E9%BB%8F%E6%80%A7%E4%B8%8D%E5%8F%AF%E5%8E%8B%E7%BC%A9%E6%B5%81(%E4%B8%80)/index.html">
 <meta property="og:site_name" content="L. paludosum">
-<meta property="og:description" content="hexo g &amp;&amp; hexo d  $E&#x3D;\frac{hv}{\lambda}$ $v&#x3D;\frac{c}{n}$ $d \vec{F}&#x3D; Id \vec{l} \times \vec{B}$  \mathbf{V}_1 \times \mathbf{V}_2 &#x3D;   \begin{vmatrix}     \mathbf{i}&amp; \mathbf{j}&amp; \mathbf{k} \\">
+<meta property="og:description" content="1. Newton内摩擦定律 两平行平板中具有粘性流体。上平板以速度 $V$ 水平移动，而下平板静止不动。由于摩擦，紧挨平板的流体与平板具有相同的速度 (无滑移条件)，平板之间的流体层的速度则与下平板的距离成正比，即： u&#x3D;\frac {V}{a} \cdot y流体摩擦表现为阻碍上平板移动力，定义单位面积平板上受到的力为 $\tau&#x3D;\mu \cdot \frac{V}{a}$，则剪切应力可表示">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2020-07-05T15:52:19.000Z">
-<meta property="article:modified_time" content="2020-07-06T03:18:23.262Z">
+<meta property="og:image" content="https://l-paludosum.oss-cn-shanghai.aliyuncs.com/img/image-20200827092832908.png">
+<meta property="og:image" content="https://l-paludosum.oss-cn-shanghai.aliyuncs.com/img/image-20200827101542199.png">
+<meta property="og:image" content="https://l-paludosum.oss-cn-shanghai.aliyuncs.com/img/image-20200827111515398.png">
+<meta property="article:published_time" content="2020-08-27T00:59:02.000Z">
+<meta property="article:modified_time" content="2020-08-27T07:22:44.570Z">
 <meta property="article:author" content="Kevin">
-<meta property="article:tag" content="equation">
+<meta property="article:tag" content="黏性">
+<meta property="article:tag" content="牛顿内摩擦定律">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://l-paludosum.oss-cn-shanghai.aliyuncs.com/img/image-20200827092832908.png">
 
-<link rel="canonical" href="http://yoursite.com/2020/07/05/test/">
+<link rel="canonical" href="http://yoursite.com/2020/08/27/%E9%BB%8F%E6%80%A7%E4%B8%8D%E5%8F%AF%E5%8E%8B%E7%BC%A9%E6%B5%81(%E4%B8%80)/">
 
 
 <script id="page-configurations">
@@ -45,7 +50,7 @@
   };
 </script>
 
-  <title>test | L. paludosum</title>
+  <title>黏性不可压缩流(一) | L. paludosum</title>
   
 
 
@@ -159,7 +164,7 @@
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block " lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/07/05/test/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/08/27/%E9%BB%8F%E6%80%A7%E4%B8%8D%E5%8F%AF%E5%8E%8B%E7%BC%A9%E6%B5%81(%E4%B8%80)/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="image" content="/images/avatar.png">
@@ -172,7 +177,7 @@
     </span>
       <header class="post-header">
         <h1 class="post-title" itemprop="name headline">
-          test
+          黏性不可压缩流(一)
         </h1>
 
         <div class="post-meta">
@@ -181,23 +186,17 @@
                 <i class="fa fa-calendar-o"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
+              
 
-              <time title="创建时间：2020-07-05 23:52:19" itemprop="dateCreated datePublished" datetime="2020-07-05T23:52:19+08:00">2020-07-05</time>
+              <time title="创建时间：2020-08-27 08:59:02 / 修改时间：15:22:44" itemprop="dateCreated datePublished" datetime="2020-08-27T08:59:02+08:00">2020-08-27</time>
             </span>
-              <span class="post-meta-item">
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-calendar-check-o"></i>
-                </span>
-                <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-07-06 11:18:23" itemprop="dateModified" datetime="2020-07-06T11:18:23+08:00">2020-07-06</time>
-              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="fa fa-folder-o"></i>
               </span>
               <span class="post-meta-item-text">分类于</span>
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%B5%8B%E8%AF%95/" itemprop="url" rel="index"><span itemprop="name">测试</span></a>
+                  <a href="/categories/%E6%B5%81%E4%BD%93%E5%8A%9B%E5%AD%A6/" itemprop="url" rel="index"><span itemprop="name">流体力学</span></a>
                 </span>
             </span>
 
@@ -212,16 +211,31 @@
     <div class="post-body" itemprop="articleBody">
 
       
-        <p>hexo g &amp;&amp; hexo d</p>
-<ul>
-<li>$E=\frac{hv}{\lambda}$ $v=\frac{c}{n}$ $d \vec{F}= Id \vec{l} \times \vec{B}$</li>
-</ul>
-<script type="math/tex; mode=display">\mathbf{V}_1 \times \mathbf{V}_2 =  
-\begin{vmatrix}  
-  \mathbf{i}& \mathbf{j}& \mathbf{k} \\  
-  \frac{\partial X}{\partial u}& \frac{\partial Y}{\partial u}& 0 \\  
-  \frac{\partial X}{\partial v}& \frac{\partial Y}{\partial v}& 0 \\  
-\end{vmatrix}</script>
+        <h3 id="1-Newton内摩擦定律"><a href="#1-Newton内摩擦定律" class="headerlink" title="1. Newton内摩擦定律"></a>1. Newton内摩擦定律</h3><p><img src="https://l-paludosum.oss-cn-shanghai.aliyuncs.com/img/image-20200827092832908.png" alt="image-20200827092832908" style="zoom:30%;" /></p>
+<p>两平行平板中具有粘性流体。上平板以速度 $V$ 水平移动，而下平板静止不动。由于摩擦，紧挨平板的流体与平板具有相同的速度 (无滑移条件)，平板之间的流体层的速度则与下平板的距离成正比，即：</p>
+<script type="math/tex; mode=display">u=\frac {V}{a} \cdot y</script><p>流体摩擦表现为阻碍上平板移动力，定义单位面积平板上受到的力为 $\tau=\mu \cdot \frac{V}{a}$，则剪切应力可表示为: </p>
+<script type="math/tex; mode=display">\begin{equation}\tau=-\frac{du}{dy} \tag{1} \end{equation}</script><h3 id="2-层流管流—Hagen-Poiseuille’s-law"><a href="#2-层流管流—Hagen-Poiseuille’s-law" class="headerlink" title="2. 层流管流—Hagen-Poiseuille’s law"></a>2. 层流管流—Hagen-Poiseuille’s law</h3><p><img src="https://l-paludosum.oss-cn-shanghai.aliyuncs.com/img/image-20200827101542199.png" alt="image-20200827101542199" style="zoom:40%;" /></p>
+<p>压强差 $P<em>{1}-P</em>{2}$ 作用在半径为 $r$ 圆柱形流体块上的力为 $(P<em>{1}-P</em>{2})\pi r^2$，圆柱形流体侧面受到的剪切应力为 $\tau$，圆柱侧面积为 $2\pi rl$，受到的阻力即为 $2\pi rl\tau$。由二力平衡及公式 $(1)$ ：</p>
+<script type="math/tex; mode=display">-\mu \frac{du}{dr}=\frac{(P_{1}-P_{2})r}{2l}</script><p>在 $r$-$R$ 积分得</p>
+<script type="math/tex; mode=display">\begin{equation}u(r)=\frac{P_{1}-P_{2}}{4 \mu l} \cdot\left(R^{2}-r^{2}\right)  \end{equation} \tag{2}</script><p>管流流量为</p>
+<script type="math/tex; mode=display">Q=\int_{0}^{R} u \cdot 2\pi  r d r=\frac{\pi  R^{4}}{8  \mu} \cdot \frac{p_{1}-p_{2}}{l} \tag{3}</script><p>流量与压降之间的关系即为Hagen-Poiseuille’s law，表明管流流量与单位长度管道上得压降成正比，与粘性系数 $\mu$ 成反比，与半径得四次方成正比。</p>
+<h3 id="3-Navier-Stokes-Equation"><a href="#3-Navier-Stokes-Equation" class="headerlink" title="3. Navier-Stokes Equation"></a>3. Navier-Stokes Equation</h3><p>首先要了解如图所示体积微元 ${\rm d}V={\rm d}x \cdot {\rm d}y \cdot {\rm d}z$ 上的正应力和切应力的表达式：</p>
+<p><img src="https://l-paludosum.oss-cn-shanghai.aliyuncs.com/img/image-20200827111515398.png" alt="image-20200827111515398" style="zoom:35%;" /></p>
+<script type="math/tex; mode=display">\left\{\begin{aligned}
+\sigma_{x x}=2 \mu \cdot \frac{\partial u}{\partial x} \quad \tau_{x y}=\tau_{y x}=\mu \cdot\left(\frac{\partial u}{\partial y}+\frac{\partial v}{\partial x}\right) \\
+\sigma_{y y}=2 \mu \cdot \frac{\partial v}{\partial y} \quad \tau_{y z}=\tau_{z y}=\mu \cdot\left(\frac{\partial v}{\partial z}+\frac{\partial w}{\partial y}\right) \\
+\sigma_{z z}=2 \mu \cdot \frac{\partial w}{\partial z} \quad \tau_{z x}=\tau_{x z}=\mu \cdot\left(\frac{\partial w}{\partial x}+\frac{\partial u}{\partial z}\right)
+\end{aligned}\right. \tag{4}</script><p>这些力在 $x,y,z$ 上分别为 $F_x,F_y,F_z$</p>
+<script type="math/tex; mode=display">F_{x}^{\prime}=\frac{\partial \sigma_{x x}}{\partial x}+\frac{\partial \tau_{x y}}{\partial y}+\frac{\partial \tau_{x z}}{\partial z} \tag{5}</script><script type="math/tex; mode=display">F_y',F_z'$$ 具有相同的形式。结合式 $(4)$ 和不可压缩流体的连续性方程式 $(6)$
+
+$$\frac{\partial u}{\partial x}+\frac{\partial u}{\partial y}+\frac{\partial u}{\partial z}=0 \tag{6}</script><p>可得</p>
+<script type="math/tex; mode=display">F_{x}^{\prime}=\mu \cdot\left(\frac{\partial^{2} u}{\partial x^{2}}+\frac{\partial^{2} u}{\partial y^{2}}+\frac{\partial^{2} u}{\partial z^{2}}\right) \tag{7}</script><p>则黏性不可压缩流体的 Navier-Stokes Equation 可表示为</p>
+<script type="math/tex; mode=display">\left\{\begin{aligned}
+\rho \cdot \frac{\mathrm{d} u}{\mathrm{d} t} &=\rho \cdot F_{x}-\frac{\partial p}{\partial x}+\mu \cdot \nabla^2 u \\
+\rho \cdot \frac{\mathrm{d} v}{\mathrm{d} t} &=\rho \cdot F_{y}-\frac{\partial p}{\partial y}+\mu \cdot \nabla^2 v \\
+\rho \cdot \frac{\mathrm{d} w}{\mathrm{d} t} &=\rho \cdot F_{z}-\frac{\partial p}{\partial z}+\mu \cdot \nabla^2 w
+\end{aligned}\right. \tag{8}</script><p>矢量形式</p>
+<script type="math/tex; mode=display">\rho \cdot \frac{d\pmb v}{dt}=\rho \cdot \boldsymbol F-\nabla p+\mu \cdot \nabla^2 \boldsymbol v \tag{9}</script>
     </div>
 
     
@@ -230,7 +244,8 @@
 
       <footer class="post-footer">
           <div class="post-tags">
-              <a href="/tags/equation/" rel="tag"># equation</a>
+              <a href="/tags/%E9%BB%8F%E6%80%A7/" rel="tag"># 黏性</a>
+              <a href="/tags/%E7%89%9B%E9%A1%BF%E5%86%85%E6%91%A9%E6%93%A6%E5%AE%9A%E5%BE%8B/" rel="tag"># 牛顿内摩擦定律</a>
           </div>
 
         
@@ -238,11 +253,11 @@
 
         
     <div class="post-nav">
-      <div class="post-nav-item"></div>
       <div class="post-nav-item">
-    <a href="/2020/07/07/%E7%9F%A2%E9%87%8F%E5%BE%AE%E5%88%86%E7%AE%97%E5%AD%90%E4%B8%8E%E6%8B%89%E6%99%AE%E6%8B%89%E6%96%AF%E7%AE%97%E5%AD%90/" rel="next" title="矢量微分算子与拉普拉斯算子">
-      矢量微分算子与拉普拉斯算子 <i class="fa fa-chevron-right"></i>
+    <a href="/2020/08/26/%E5%BC%A0%E9%87%8F%E5%9F%BA%E7%A1%80/" rel="prev" title="张量基础">
+      <i class="fa fa-chevron-left"></i> 张量基础
     </a></div>
+      <div class="post-nav-item"></div>
     </div>
       </footer>
     
@@ -302,6 +317,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-Newton内摩擦定律"><span class="nav-number">1.</span> <span class="nav-text">1. Newton内摩擦定律</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-层流管流—Hagen-Poiseuille’s-law"><span class="nav-number">2.</span> <span class="nav-text">2. 层流管流—Hagen-Poiseuille’s law</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-Navier-Stokes-Equation"><span class="nav-number">3.</span> <span class="nav-text">3. Navier-Stokes Equation</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
