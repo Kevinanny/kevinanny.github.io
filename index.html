@@ -187,7 +187,7 @@
                   <i class="fa fa-calendar-check-o"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-19 11:07:50" itemprop="dateModified" datetime="2020-11-19T11:07:50+08:00">2020-11-19</time>
+                <time title="修改时间：2020-11-19 15:36:55" itemprop="dateModified" datetime="2020-11-19T15:36:55+08:00">2020-11-19</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -245,7 +245,31 @@
 涉及发射和反射的辐射强度  $$I_{\lambda, e+r}(\lambda, \theta, \phi)</script><p><strong>光谱有效辐射密度</strong> <script type="math/tex">J_\lambda[\mathrm W /(\mathrm m^2 \cdot \mu \mathrm m  )]</script> </p>
 <script type="math/tex; mode=display">J_\lambda =\int_{0}^{2\pi} \int_{0}^{\frac{\pi}{2}} I_{\lambda, e+r}(\lambda, \theta, \phi)\cos \theta \sin \theta \mathrm{d} \theta \mathrm{d} \phi</script><p><strong>全波长有效辐射密度</strong>  <script type="math/tex">J[\mathrm W /(\mathrm m^2)]</script></p>
 <script type="math/tex; mode=display">J = \int_{0}^{\infty}J_\lambda(\lambda) \mathrm d \lambda</script><script type="math/tex; mode=display">J = \int_{0}^{\infty}\int_{0}^{2\pi} \int_{0}^{\frac{\pi}{2}} I_{\lambda, e+r}(\lambda, \theta, \phi)\cos \theta \sin \theta \mathrm{d} \theta \mathrm{d} \phi \mathrm d \lambda</script><p><strong>表面为漫反射体又是漫发射体</strong></p>
-<script type="math/tex; mode=display">J_\lambda =\pi I_{\lambda,e+r}(\lambda)</script><script type="math/tex; mode=display">J =\pi I_{e+r}</script><h1 id="黑体辐射"><a href="#黑体辐射" class="headerlink" title="黑体辐射"></a>黑体辐射</h1>
+<script type="math/tex; mode=display">J_\lambda =\pi I_{\lambda,e+r}(\lambda)</script><script type="math/tex; mode=display">J =\pi I_{e+r}</script><h1 id="黑体辐射"><a href="#黑体辐射" class="headerlink" title="黑体辐射"></a>黑体辐射</h1><h2 id="性质"><a href="#性质" class="headerlink" title="性质"></a>性质</h2><ol>
+<li><p>黑体能吸收任何波长和任何方向的全部投射辐射。</p>
+</li>
+<li><p>对给定的温度和波长，不存在能比黑体发射更多能量的表面。</p>
+</li>
+<li><p>黑体是漫发射体，所发射的辐射是波长和温度的函数，与方向无关。</p>
+</li>
+</ol>
+<h2 id="普朗克分布"><a href="#普朗克分布" class="headerlink" title="普朗克分布"></a>普朗克分布</h2><p><strong>黑体的光谱强度</strong></p>
+<script type="math/tex; mode=display">I_{\lambda, b}(\lambda, T) =\frac{2 h c_{o}^{2}}{\lambda^{5}\left[\exp \left(h c_{o} / \lambda k_{B} T\right)-1\right]}</script><script type="math/tex; mode=display">\scriptsize h=6.626 \times 10^{-34} \mathrm J \cdot \mathrm s \quad k=1.381 \times 10^{-23} \mathrm J/ \mathrm K</script><p><strong>黑体的光谱发射功率</strong></p>
+<script type="math/tex; mode=display">E_{\lambda, b}(\lambda, T)=\pi I_{\lambda, b}(\lambda, T)=\frac{C_{1}}{\lambda^{5}\left[\exp \left(C_{2} / \lambda T\right)-1\right]}</script><script type="math/tex; mode=display">\scriptsize C_1=2 \pi h c_{0}^{2} =3.742 \times 10^8 \mathrm W \cdot \mu \mathrm m^4/ \mathrm m^2 \quad C_2 = \left(hC_0/k \right)=1.439 \times 10^4 \mu \mathrm m \cdot K</script><h2 id="维恩位移定律"><a href="#维恩位移定律" class="headerlink" title="维恩位移定律"></a>维恩位移定律</h2><p>将光谱发射功率对 <script type="math/tex">\lambda</script> 求导，令导数为0，可得</p>
+<script type="math/tex; mode=display">\lambda_{max} T=C_3</script><script type="math/tex; mode=display">\scriptsize C_3=2898 \mu \mathrm m\cdot \mathrm K</script><h2 id="斯蒂芬-玻尔兹曼定律"><a href="#斯蒂芬-玻尔兹曼定律" class="headerlink" title="斯蒂芬-玻尔兹曼定律"></a>斯蒂芬-玻尔兹曼定律</h2><p><strong>全波长发射功率</strong></p>
+<script type="math/tex; mode=display">E_b = \int_{0}^{\infty}E_{\lambda ,b}(\lambda,T) \mathrm d \lambda</script><script type="math/tex; mode=display">E_b= \sigma T^4</script><script type="math/tex; mode=display">\scriptsize \sigma=5.670 \times 10^{-8} \mathrm W/(\mathrm m^2) \cdot \mathrm K^4</script><p><strong>全波长强度</strong></p>
+<script type="math/tex; mode=display">I_b=\frac {E_b}{\pi}</script><h2 id="带发射（Band-Emission"><a href="#带发射（Band-Emission" class="headerlink" title="带发射（Band Emission)"></a>带发射（Band Emission)</h2><p>黑体在某个波段发出的辐射在黑体的全波长辐射中所占的份额</p>
+<p>从 <script type="math/tex">0\sim \lambda</script> 所占比例</p>
+<script type="math/tex; mode=display">F_{(0 \rightarrow \lambda)} \equiv \frac{\int_{0}^{\lambda} E_{\lambda, b} d \lambda}{\int_{0}^{\infty} E_{\lambda, b} d \lambda}=\frac{\int_{0}^{\lambda} E_{\lambda, b} d \lambda}{\sigma T^{4}}=\int_{0}^{\lambda T} \frac{E_{\lambda, b}}{\sigma T^{5}} d(\lambda T)=f(\lambda T)</script><p>则从 <script type="math/tex">\lambda_1\sim \lambda_2</script> 所占比例</p>
+<script type="math/tex; mode=display">F_{\left(\lambda_{1} \rightarrow \lambda_{2}\right)}=\frac{\int_{0}^{\lambda_{2}} E_{\lambda, b} d \lambda-\int_{0}^{\lambda_{1}} E_{\lambda, b} d \lambda}{\sigma T^{4}}=F_{\left(0 \rightarrow \lambda_{2}\right)}-F_{\left(0 \rightarrow \lambda_{1}\right)}</script><p>有表可查：</p>
+<p><img src="https://l-paludosum.oss-cn-shanghai.aliyuncs.com/img/image-20201119132831946.png" alt="image-20201119132831946"></p>
+<h1 id="实际表面的发射"><a href="#实际表面的发射" class="headerlink" title="实际表面的发射"></a>实际表面的发射</h1><p><strong>光谱定向发射率</strong></p>
+<script type="math/tex; mode=display">\varepsilon_{\lambda, \theta}(\lambda, \theta, \phi, T) \equiv \frac{I_{\lambda, e}(\lambda, \theta, \phi, T)}{I_{\lambda, b}(\lambda, T)}</script><p><strong>全波长定向发射率</strong></p>
+<script type="math/tex; mode=display">\varepsilon_{\theta}( \theta, \phi, T) \equiv \frac{I_{ e}( \theta, \phi, T)}{I_{b}(\lambda, T)}</script><p><strong>光谱半球向发射率</strong></p>
+<script type="math/tex; mode=display">\varepsilon_{\lambda}(\lambda,  T) \equiv \frac{E_{\lambda}(\lambda, T)}{E_{\lambda, b}(\lambda, T)}</script><script type="math/tex; mode=display">\varepsilon_{\lambda}(\lambda, T)=\frac{\int_{0}^{2 \pi} \int_{0}^{\pi / 2} I_{\lambda, e}(\lambda, \theta, \phi, T) \cos \theta \sin \theta \mathrm{d} \theta \mathrm{d} \phi}{\int_{0}^{2 \pi} \int_{0}^{\pi / 2} I_{\lambda, b}(\lambda, T) \cos \theta \sin \theta \mathrm{d} \theta \mathrm{d} \phi}</script><p>由于 <script type="math/tex">I_{\lambda, b}(\lambda, T)</script> 与角度无关，提出到分母得</p>
+<script type="math/tex; mode=display">\varepsilon_{\lambda}(\lambda, T)=\frac{\int_{0}^{2 \pi} \int_{0}^{\pi / 2} \varepsilon_{\lambda, \theta}(\lambda, \theta, \phi, T) \cos \theta \sin \theta \mathrm{d} \theta \mathrm{d} \phi}{\int_{0}^{2 \pi} \int_{0}^{\pi / 2} \cos \theta \sin \theta \mathrm{d} \theta \mathrm{d} \phi}</script><p>对于大多数表面，可认为 <script type="math/tex">\varepsilon_{\lambda, \theta}</script> 与方位角 <script type="math/tex">\phi</script> 无关，计算积分得</p>
+<script type="math/tex; mode=display">\color[RGB]{12,37,119} \varepsilon_{\lambda}(\lambda, T)=2 \int_{0}^{\pi / 2} \varepsilon_{\lambda, \theta}(\lambda, \theta, T) \cos \theta \sin \theta \mathrm{d} \theta</script><p><strong>全波长半球向发射率</strong></p>
+<script type="math/tex; mode=display">\varepsilon(T) \equiv \frac{E( T)}{E_{b}(T)}</script>
       
     </div>
 
