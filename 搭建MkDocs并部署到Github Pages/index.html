@@ -52,8 +52,6 @@
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#deploy-github-pages">Deploy Github Pages</a>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#latex-test">Latex test</a>
-    </li>
     </ul>
                 </li>
               </ul>
@@ -82,33 +80,33 @@
               
                 <h1 id="mkdocsgithub-pages">搭建MkDocs并部署到Github Pages</h1>
 <h2 id="installation">Installation</h2>
-<p>Install python</p>
+<p><strong>Install python</strong></p>
 <p>check if Python and Python package manager, pip is installed.</p>
 <pre><code>C:\Users\Kevin&gt;python --version
 Python 3.11.6
 C:\Users\Kevin&gt;pip --version
 pip 24.0 from C:\Program Files\Python\Python312\Lib\site-packages\pip (python 3.12)
 </code></pre>
-<p>Install mkdocs </p>
+<p><strong>Install mkdocs</strong> </p>
 <p><code>pip install mkdocs</code></p>
 <p>check if mkdocs is installed</p>
 <pre><code>C:\Users\Kevin&gt;mkdocs --version
 mkdocs, version 1.6.0 from C:\Program Files\Python\Python312\Lib\site-packages\mkdocs (Python 3.12)
 </code></pre>
-<p>Install git</p>
+<p><strong>Install git</strong></p>
 <p>check if git is installed</p>
 <pre><code>C:\Users\Kevin&gt;git --version
 git version 2.44.0.windows.1
 </code></pre>
 <h2 id="creat-mkdocs">Creat MkDocs</h2>
-<p>Build</p>
+<p><strong>Build</strong></p>
 <ul>
 <li><code>mkdocs new [dir-name]</code> - Creat a new project in desired file path.</li>
 <li><code>mkdocs serve</code> - Start the live-reloading docs server, visit <a href="">127.0.0.1:8000</a> to see the local site.</li>
 <li><code>mkdocs build</code> - Build the documentation site. A new folder "site" will be generated to be deployed.</li>
 <li><code>mkdocs -h</code> - Print help message and exit.</li>
 </ul>
-<p>File structure</p>
+<p><strong>File structure</strong></p>
 <pre><code>mkdocs.yml        # The configuration file.
 site/             # The site 
     ...
@@ -120,7 +118,7 @@ docs/
         index.md
         ...
 </code></pre>
-<p>Configration</p>
+<p><strong>Configration</strong></p>
 <p>The mkdocs.yml file:</p>
 <pre><code class="language-yaml">site_name: Liuwk Space
 theme: readthedocs    # MkDocs support theme of 'mkdocs' and 'readthedocs'
@@ -138,7 +136,7 @@ git remote add origin https://github.com/username/username.github.io.git
 mkdocs dh-deploy    # This command will creat a gh-pages branch and push content to it.
 </code></pre>
 <p>Once the content changes, run command <code>mkdocs build &amp;&amp; mkdocs dh-depoly</code>.</p>
-<h2 id="latex-test">Latex test</h2>
+<p><strong>Latex test</strong></p>
 <p>Inline equation: <script type="math/tex">\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)</script>.</p>
 <p>Block equation: </p>
 <p>
