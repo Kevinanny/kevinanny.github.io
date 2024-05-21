@@ -149,20 +149,13 @@ markdown_extensions:  # To include extension of 'python-markdown-math'
       enable_dollar_delimiter: true    # To enable inline equation $...$ 
 </code></pre>
 <h2 id="deploy-github-pages">Deploy Github Pages</h2>
-<ul>
-<li>
 <p>Creat a new <strong>public</strong> repo, repository name should be <strong>username.github.io</strong>.</p>
-</li>
-<li>
 <p>In the root path of your mkdocs folder</p>
-</li>
-</ul>
-<p><code>git init            # initial git
-  git remote add origin https://github.com/username/username.github.io.git
-  mkdocs dh-deploy    # This command will creat a gh-pages branch and push content to it.</code></p>
-<ul>
-<li>Once the content changes, run command <code>mkdocs build &amp;&amp; mkdocs dh-depoly</code>.</li>
-</ul>
+<pre><code>git init            # initial git
+git remote add origin https://github.com/username/username.github.io.git
+mkdocs dh-deploy    # This command will creat a gh-pages branch and push content to it.
+</code></pre>
+<p>Once the content changes, run command <code>mkdocs build &amp;&amp; mkdocs dh-depoly</code>.</p>
 <h2 id="latex-test">Latex test</h2>
 <p>Inline equation: <script type="math/tex">\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)</script>.</p>
 <p>Block equation: </p>
