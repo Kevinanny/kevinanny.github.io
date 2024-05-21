@@ -59,7 +59,7 @@
     </li>
         </ul>
     </li>
-    <li class="toctree-l2"><a class="reference internal" href="#github-pages">Github Pages</a>
+    <li class="toctree-l2"><a class="reference internal" href="#deploy-github-pages">Deploy Github Pages</a>
     </li>
     <li class="toctree-l2"><a class="reference internal" href="#latex-test">Latex test</a>
     </li>
@@ -119,7 +119,7 @@
 <h3 id="build">Build</h3>
 <ul>
 <li><code>mkdocs new [dir-name]</code> - Creat a new project in desired file path.</li>
-<li><code>mkdocs serve</code> - Start the live-reloading docs server, visit <a href="127.0.0.1:8000">127.0.0.1:8000</a> to see the local site.</li>
+<li><code>mkdocs serve</code> - Start the live-reloading docs server, visit <a href="">127.0.0.1:8000</a> to see the local site.</li>
 <li><code>mkdocs build</code> - Build the documentation site. A new folder "site" will be generated to be deployed.</li>
 <li><code>mkdocs -h</code> - Print help message and exit.</li>
 </ul>
@@ -128,7 +128,7 @@
 site/             # The site 
     ...
 docs/
-    CNAME         # The domain file would be copied to \site when mkdocs build.
+    CNAME         # The self-defined domain file.
     index.md      # The documentation homepage.
     ...           # Other markdown pages, images and other files.
     dir/          # if nacessary, new folder is supported.
@@ -144,8 +144,21 @@ markdown_extensions:  # To include extension of 'python-markdown-math'
   - mdx_math:         
       enable_dollar_delimiter: true    # To enable inline equation $...$ 
 </code></pre>
-<h2 id="github-pages">Github Pages</h2>
-<p>Creat a new repo, repository name should be 'username.github.io'</p>
+<h2 id="deploy-github-pages">Deploy Github Pages</h2>
+<ul>
+<li>
+<p>Creat a new <strong>public</strong> repo, repository name should be <strong>username.github.io</strong>.</p>
+</li>
+<li>
+<p>In the root path of your mkdocs folder</p>
+</li>
+</ul>
+<p><code>git init            # initial git
+  git remote add origin https://github.com/username/username.github.io.git
+  mkdocs dh-deploy    # This command will creat a gh-pages branch and push content to it.</code></p>
+<ul>
+<li>Once the content changes, run command <code>mkdocs build</code> and <code>mkdocs dh-depoly</code>.</li>
+</ul>
 <h2 id="latex-test">Latex test</h2>
 <p>Inline equation: <script type="math/tex">\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)</script>.</p>
 <p>Block equation: </p>
