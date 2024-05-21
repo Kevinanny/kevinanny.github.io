@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>搭建MkDocs并部署到Github Pages - Liuwk Docs</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "\u642d\u5efaMkDocs\u5e76\u90e8\u7f72\u5230Github Pages";
+        var mkdocs_page_input_path = "Blog\\Index.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Liuwk Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Welcome to Liuwk Docs</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Blog</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">搭建MkDocs并部署到Github Pages</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#mkdocs">MkDocs</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#build">Build</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#file-structure">File structure</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#configration">configration</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#github-pages">Github Pages</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#latex-test">Latex test</a>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Liuwk Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Blog</li>
+      <li class="breadcrumb-item active">搭建MkDocs并部署到Github Pages</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="mkdocsgithub-pages">搭建MkDocs并部署到Github Pages</h1>
+<h2 id="installation">Installation</h2>
+<ul>
+<li>install python</li>
+</ul>
+<p>check if Python and Python package manager, pip is installed.</p>
+<p><code>console
+  C:\Users\Kevin&gt;python --version
+  Python 3.11.6
+  C:\Users\Kevin&gt;pip --version
+  pip 24.0 from C:\Program Files\Python\Python312\Lib\site-packages\pip (python 3.12)</code></p>
+<ul>
+<li>install mkdocs <code>pip install mkdocs</code></li>
+</ul>
+<p>check if mkdocs is installed</p>
+<p><code>console
+  C:\Users\Kevin&gt;mkdocs --version
+  mkdocs, version 1.6.0 from C:\Program Files\Python\Python312\Lib\site-packages\mkdocs (Python 3.12)</code></p>
+<ul>
+<li>install git</li>
+</ul>
+<p>check if git is installed</p>
+<p><code>console
+  C:\Users\Kevin&gt;git --version
+  git version 2.44.0.windows.1</code></p>
+<h2 id="mkdocs">MkDocs</h2>
+<h3 id="build">Build</h3>
+<ul>
+<li><code>mkdocs new [dir-name]</code> - Creat a new project in desired file path.</li>
+<li><code>mkdocs serve</code> - Start the live-reloading docs server, visit <a href="127.0.0.1:8000">127.0.0.1:8000</a> to see the local site.</li>
+<li><code>mkdocs build</code> - Build the documentation site. A new folder "site" will be generated to be deployed.</li>
+<li><code>mkdocs -h</code> - Print help message and exit.</li>
+</ul>
+<h3 id="file-structure">File structure</h3>
+<pre><code>mkdocs.yml        # The configuration file.
+site/             # The site 
+    ...
+docs/
+    CNAME         # The domain file would be copied to \site when mkdocs build.
+    index.md      # The documentation homepage.
+    ...           # Other markdown pages, images and other files.
+    dir/          # if nacessary, new folder is supported.
+        index.md
+        ...
+</code></pre>
+<h3 id="configration">configration</h3>
+<pre><code class="language-yaml">site_name: Liuwk Docs
+theme: readthedocs    # MkDocs support theme of 'mkdocs' and 'readthedocs'
+extra_javascript:     # To enable latex, a html file is nacessary.
+  - https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML
+markdown_extensions:  # To include extension of 'python-markdown-math'
+  - mdx_math:         
+      enable_dollar_delimiter: true    # To enable inline equation $...$ 
+</code></pre>
+<h2 id="github-pages">Github Pages</h2>
+<p>Creat a new repo, repository name should be 'username.github.io'</p>
+<h2 id="latex-test">Latex test</h2>
+<p>Inline equation: <script type="math/tex">\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)</script>.</p>
+<p>Block equation: </p>
+<p>
+<script type="math/tex; mode=display"> \begin{vmatrix}
+ a & b\\
+ c & d
+\end{vmatrix} </script>
+</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.." class="btn btn-neutral float-left" title="Welcome to Liuwk Docs"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.4/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
