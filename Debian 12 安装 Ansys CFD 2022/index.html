@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Debian 12 安装 Ansys CFD 2022 - Liuwk Space</title>
+    <title>在Linux上安装Ansys CFD - Liuwk Space</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Debian 12 \u5b89\u88c5 Ansys CFD 2022";
+        var mkdocs_page_name = "\u5728Linux\u4e0a\u5b89\u88c5Ansys CFD";
         var mkdocs_page_input_path = "Debian 12 \u5b89\u88c5 Ansys CFD 2022.md";
         var mkdocs_page_url = null;
       </script>
@@ -40,8 +40,12 @@
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
-                <li class="toctree-l1 current"><a class="reference internal current" href="#">Debian 12 安装 Ansys CFD 2022</a>
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">在Linux上安装Ansys CFD</a>
     <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#ubuntuansys">在Ubuntu上安装Ansys需要注意的事项</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#debianansys">在Debian上安装Ansys需要注意的事项</a>
+    </li>
     </ul>
                 </li>
               </ul>
@@ -63,7 +67,7 @@
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Debian 12 安装 Ansys CFD 2022</li>
+      <li class="breadcrumb-item active">在Linux上安装Ansys CFD</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -72,7 +76,22 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="debian-12-ansys-cfd-2022">Debian 12 安装 Ansys CFD 2022</h1>
+                <h1 id="linuxansys-cfd">在Linux上安装Ansys CFD</h1>
+<p>目前测试过的Ansys CFD版本有2022R2和2023R1，测试的Linux发行版有Fedora39，ubuntu22.04LTS，Debian12。目前完美兼容的是Ubuntu22.04LTS和Ansys2022R2，可以使用workbench打开Mesh模块，Static mechanical模块，icemCFD模块，Fluent模块。</p>
+<h2 id="ubuntuansys">在Ubuntu上安装Ansys需要注意的事项</h2>
+<p>**需要补充安装的包 ** </p>
+<p>lsb-core: 解决无法获取hostID的问题</p>
+<p>qtcreator: 解决./INSTALL命令无法启动安装Ansys文件的问题</p>
+<p>libjpeg62: 解决./runwb2无法启动workbench的问题</p>
+<p>tcsh: 解决Fluent meshing 无法导入cad文件的问题</p>
+<p>libmotif-common, xfonts-75dpi, xfonts-100dpi 解决icemCFD启动时显示缺失 font family helvetica </p>
+<p><strong>icemCFD无法启动的问题</strong></p>
+<p>/ansys_inc/v222/icemcfd/x86_64/lib/libstdc++.so.6版本太低，需要将新版本复制至路径中并链接</p>
+<pre><code>sudo cp /usr/lib/x86_64-linux-gnu/libstdc++.so.6.0.30 /ansys_inc/v222/icemcfd/x86_64/lib
+sudo rm /ansys_inc/v222/icemcfd/x86_64/lib/libstdc++.so.6
+sudo ln -s libstdc++.so.6.0.30 libstdc++.so.6
+</code></pre>
+<h2 id="debianansys">在Debian上安装Ansys需要注意的事项</h2>
 <p><strong>lsb-core</strong></p>
 <p>Debian 12移除了lsb lsb-core等库，而Ansys需要调用<code>/ld-lsb-x86-64.so.3</code>来获取system hostid，而其功能可以通过自带的库<code>ld-linux-x86-64.2</code>实现，执行命令</p>
 <p><code>sudo ln -s /lib64/ld-linux-x86-64.so.2 /lib64/ld-lsb-x86-64.so.3</code></p>
